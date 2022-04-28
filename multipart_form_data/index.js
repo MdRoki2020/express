@@ -1,5 +1,5 @@
 var express=require('express');
-var multer=require('multer');
+var multer=require('multer'); //Multer is a node.js middleware for handling multipart/form-data, which is primarily used for uploading files.
 var multer=multer();
 
 
