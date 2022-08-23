@@ -1,4 +1,4 @@
-const Create= async (Request,PostModel) => {
+const CreatePost= async (Request,PostModel) => {
     try{
 
         let PostBody=Request.body;
@@ -10,4 +10,4 @@ const Create= async (Request,PostModel) => {
         return {status: "fail", data: error.toString()}
     }
 }
-module.exports=Create
+module.exports=CreatePost

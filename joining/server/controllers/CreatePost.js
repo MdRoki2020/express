@@ -1,7 +1,11 @@
-const PostModel=require('../models/PostModel')
-const CreateService=require("./CreatePost")
-
-exports.CreatePost=async (req, res) => {
-    let Result= await CreateService(req,PostModel)
-    res.status(200).json(Result)
+const PostModel=require("../models/PostModel")
+exports.CreatePost=(req,res)=>{
+    let reqBody=req.body;
+    PostModel.create(reqBody,(err,data)=>{
+        if(err){
+            res.status(400).json({status:"fail",data:err})
+        }else{
+            res.status(200).json({status:"success",data:data})
+        }
+    })
 }
