@@ -8,6 +8,7 @@ const router=express.Router();
 
 router.post("/CreatePost",CreatePost.CreatePost);
 router.post("/CreateComment",CreateComment.CreateComment);
+
 router.get("/joinTwoCollection",joinTwoCollection.joinTwoCollection);
 
 
