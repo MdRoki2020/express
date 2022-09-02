@@ -6,5 +6,5 @@ const DataSchema=mongoose.Schema({
     CreatedDate:{type:Date,default:Date.now()}
     
 },{versionKey:false});
-const PostCommentModel=new mongoose.model('comments',DataSchema);
+const PostCommentModel=mongoose.model('comments',DataSchema);
 module.exports=PostCommentModel
