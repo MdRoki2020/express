@@ -1,6 +1,6 @@
 const PostCommentModel=require('../models/PostCommentModel');
 
-exports.joinTwoCollection=async (err,data)=>{
+exports.joinTwoCollection=async (error,data)=>{
     try{
         data=await PostCommentModel.aggregate([
 
@@ -10,7 +10,7 @@ exports.joinTwoCollection=async (err,data)=>{
             }
             
             ])
-    }catch(err){
+    }catch(error){
         return {status: "fail", data: err.toString()}
     }
 }
